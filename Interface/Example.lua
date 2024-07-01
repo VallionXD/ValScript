@@ -1,5 +1,5 @@
 -- Load the vape lite interface
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/VallionXD/ValScript/main/Interface/Library.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.github.com/VallionXD/ValScript/Interface/Library.lua"))()
 
 -- Create the window.
 local Window = Library:Window("Example Interface",
@@ -47,9 +47,10 @@ Tab:Slider("Slider",
 
     -- When changed function.
     function(NewValue)
-    -- Print new state. 
-    print(NewValue)
-end)
+        -- Print new state. 
+        print(NewValue)
+    end
+)
 
 -- Create a new  dropdown
 Tab:Dropdown("Dropdown",
