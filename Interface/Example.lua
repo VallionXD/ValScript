@@ -78,7 +78,7 @@ Tab:Colorpicker("Colorpicker",
 
 -- Create a new textbox
 Tab:Textbox("Textbox",
-    -- Not even sure what this does.
+    -- Clear text when not focused.
     true, 
     
     -- When changed function.
