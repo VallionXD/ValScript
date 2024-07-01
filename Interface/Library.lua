@@ -1507,6 +1507,52 @@ function lib:Window(text, preset, closebind)
 
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
+        function tabcontent:Paragraph(Title, Content)
+            local Paragraph = Instance.new("Frame")
+            local ParagraphTitle = Instance.new("TextLabel")
+            local ParagraphContent = Instance.new("TextLabel")
+             
+            Paragraph.Name = "Paragraph"
+            Paragraph.Parent = Tab
+            Paragraph.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+            Paragraph.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            Paragraph.BorderSizePixel = 0
+            Paragraph.Position = UDim2.new(0.858, 0, 0.617, 0)
+            Paragraph.Size = UDim2.new(0, 363, 0, 102)
+            
+            ParagraphTitle.Name = "ParagraphTitle"
+            ParagraphTitle.Parent = Paragraph
+            ParagraphTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            ParagraphTitle.BackgroundTransparency = 1
+            ParagraphTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            ParagraphTitle.BorderSizePixel = 0
+            ParagraphTitle.Position = UDim2.new(0.036, 0, 0, 0)
+            ParagraphTitle.Size = UDim2.new(0, 340, 0, 42)
+            ParagraphTitle.Font = Enum.Font.GothamMedium
+            ParagraphTitle.Text = Title
+            ParagraphTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+            ParagraphTitle.TextSize = 14
+            ParagraphTitle.TextXAlignment = Enum.TextXAlignment.Left
+            
+            ParagraphContent.Name = "ParagraphContent"
+            ParagraphContent.Parent = Paragraph
+            ParagraphContent.BackgroundColor3 = Color3.new(1, 1, 1)
+            ParagraphContent.BackgroundTransparency = 1
+            ParagraphContent.BorderColor3 = Color3.new(0, 0, 0)
+            ParagraphContent.BorderSizePixel = 0
+            ParagraphContent.Position = UDim2.new(0.036, 0, 0.336, 0)
+            ParagraphContent.Size = UDim2.new(0, 340, 0, 50)
+            ParagraphContent.Font = Enum.Font.Gotham
+            ParagraphContent.Text = Content
+            ParagraphContent.TextColor3 = Color3.fromRGB(180, 180, 180)
+            ParagraphContent.TextSize = 13
+            ParagraphContent.TextWrapped = true
+            ParagraphContent.TextXAlignment = Enum.TextXAlignment.Left
+            ParagraphContent.TextYAlignment = Enum.TextYAlignment.Top
+
+            Paragraph.Size = UDim2.new(0, 363, 0, ParagraphContent.TextBounds.Y + 42)
+            ParagraphContent.Size = UDim2.new(0, 187, 0, ParagraphContent.TextBounds.Y)
+        end
         function tabcontent:Textbox(text, disapper, callback)
             local Textbox = Instance.new("Frame")
             local TextboxCorner = Instance.new("UICorner")
