@@ -1,6 +1,8 @@
 # ValScript - Interface Documentation
 > A interface based on the minecraft hacked client vape lite, but with changes to work as a roblox script.
 
+*Credits to [dawid-scripts](https://github.com/dawid-scripts) for making the entire original library.*
+
 ## Loading the library.
 > You will need to load the library in order to use it. This is how you load the library using loadstring and a http get request.
 
